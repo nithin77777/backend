@@ -2,3 +2,4 @@ django>5
 djangorestframework
 gunicorn
 mysqlclient
+pylint
