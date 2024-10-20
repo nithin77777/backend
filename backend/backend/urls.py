@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 # from backend import api
+from api.views import land_here
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls'))
+    path('', view=land_here),
+    path('api/', include('api.urls')),
+     # Landing Page
 ]
