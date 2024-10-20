@@ -22,7 +22,9 @@ from api.views import land_here
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Landing Page
     path('', view=land_here),
-    path('api/', include('api.urls')),
-     # Landing Page
+    # api views
+    path('api/', include('api.urls')), 
+    
 ]
