@@ -40,7 +40,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
 ]
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [ 
+        # 'api.permissions.CustomPermission',
+        'rest_framework.permissions.AllowAny',  # Optional: Allow unrestricted access by default
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # For token-based
+        'rest_framework.authentication.SessionAuthentication',  # For session-based
+    ],
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
